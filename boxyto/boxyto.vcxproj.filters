@@ -24,9 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="system.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="memory\DynamicSegment.h">
       <Filter>memory</Filter>
     </ClInclude>
@@ -95,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="template\Compare.h">
       <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="system.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
