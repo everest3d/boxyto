@@ -44,7 +44,7 @@ dlldata.c
 project.lock.json
 artifacts/
 
-*_i.c 
+*_i.c
 *_p.c
 *_i.h
 *.ilk
@@ -68,8 +68,6 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
-*.sdf
-*.filters
 
 # Chutzpah Test files
 _Chutzpah*
