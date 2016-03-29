@@ -65,7 +65,7 @@
     <ClCompile Include="memory\OSMemory.cpp">
       <Filter>memory</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="memory\Source.cpp">
       <Filter>memory</Filter>
     </ClCompile>
   </ItemGroup>
