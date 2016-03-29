@@ -16,10 +16,54 @@
     <Filter Include="memory">
       <UniqueIdentifier>{02d69884-0ba3-4fb9-b3ab-16e3659a3e84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="containers">
+      <UniqueIdentifier>{205ac87c-5a5d-452d-b994-07e11fb13f18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="memory\Test.h">
+    <ClInclude Include="system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\DynamicSegment.h">
       <Filter>memory</Filter>
     </ClInclude>
+    <ClInclude Include="memory\FastNodeAllocator.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\LinearAllocator.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\MemoryOps.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\OSMemory.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\PlatformMemory.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\Pointer.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\PoolNodeAllocator.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\SimpleNodeAllocator.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\SmartPointers.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\StaticSegment.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\StdAllocator.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="memory\OSMemory.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

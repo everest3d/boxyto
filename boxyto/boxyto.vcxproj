@@ -18,6 +18,24 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="memory\DynamicSegment.h" />
+    <ClInclude Include="memory\FastNodeAllocator.h" />
+    <ClInclude Include="memory\LinearAllocator.h" />
+    <ClInclude Include="memory\MemoryOps.h" />
+    <ClInclude Include="memory\OSMemory.h" />
+    <ClInclude Include="memory\PlatformMemory.h" />
+    <ClInclude Include="memory\Pointer.h" />
+    <ClInclude Include="memory\PoolNodeAllocator.h" />
+    <ClInclude Include="memory\SimpleNodeAllocator.h" />
+    <ClInclude Include="memory\SmartPointers.h" />
+    <ClInclude Include="memory\StaticSegment.h" />
+    <ClInclude Include="memory\StdAllocator.h" />
+    <ClInclude Include="system.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="memory\OSMemory.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{AE598178-08C5-4375-B2AC-E1DFBBF2ED58}</ProjectGuid>
     <RootNamespace>boxyto</RootNamespace>
@@ -79,7 +97,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
+      <Optimization>MaxSpeed</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -109,9 +127,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="memory\Test.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
