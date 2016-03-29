@@ -19,6 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="containers\Array.h" />
+    <ClInclude Include="containers\CircularArray.h" />
+    <ClInclude Include="containers\ForEach.h" />
+    <ClInclude Include="containers\Hash.h" />
+    <ClInclude Include="containers\List.h" />
+    <ClInclude Include="containers\Map.h" />
+    <ClInclude Include="containers\Pair.h" />
+    <ClInclude Include="containers\Sets.h" />
+    <ClInclude Include="containers\Tree.h" />
     <ClInclude Include="memory\DynamicSegment.h" />
     <ClInclude Include="memory\FastNodeAllocator.h" />
     <ClInclude Include="memory\LinearAllocator.h" />
@@ -32,10 +41,11 @@
     <ClInclude Include="memory\StaticSegment.h" />
     <ClInclude Include="memory\StdAllocator.h" />
     <ClInclude Include="system.h" />
+    <ClInclude Include="template\Common.h" />
+    <ClInclude Include="template\Compare.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory\OSMemory.cpp" />
-    <ClCompile Include="memory\Source.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{AE598178-08C5-4375-B2AC-E1DFBBF2ED58}</ProjectGuid>
