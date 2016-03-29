@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="memory\OSMemory.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{AE598178-08C5-4375-B2AC-E1DFBBF2ED58}</ProjectGuid>
