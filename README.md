@@ -122,6 +122,13 @@ Everest::Array<std::string> array(alloc);
 // The following is wrong for all boxyto containers
 // Everest::Array<std::string> array;
 ```
+### Documentation
+All source code is inline documented
+
+### License
+MIT
+
+Free Software, Hell Yeah!
 
 [OSMemory]: </boxyto/memory/OSMemory.h>
 [StaticSegment]: </boxyto/memory/StaticSegment.h>
