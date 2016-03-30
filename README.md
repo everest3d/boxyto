@@ -52,7 +52,7 @@ Each container have iterators, search/find, and can input/output to other types 
 - [Common]: Some template based support for other systems
 
 ### Usage
-####Using Memory manager
+#### Using Memory manager
 First, we need to initialize the memory manager:
 ```
 OSMemory::Init(SIZE_T size);
@@ -98,6 +98,29 @@ dynamicSegment.Dealloc(handle);
 // remember that defragmentation is consuming time heavly, use it wisely,
 // for example: use it when we have remaining time in our game loop system
 dynamicSegment.Defragment();
+
+// To reset/release a segment
+dynamicSegment.Release();
+```
+#### Using Containers
+We will assume that we have configured DynamicSegment, also we will use Everest::Array for example
+```
+// Define out allocator for simple
+typedef Everest::LinearAllocator<std::string> Allocator;
+
+// Create a segment manager to consume
+std::shard_ptr<DynamicSegment> segment(new DynamicSegment);
+
+// Create an allocator instance
+// allocators should constructed with a segment manager instance
+Allocator alloc(segment);
+
+// Create the array
+// We then pass a configured allocator to the container
+Everest::Array<std::string> array(alloc);
+
+// The following is wrong for all boxyto containers
+// Everest::Array<std::string> array;
 ```
 
 [OSMemory]: </boxyto/memory/OSMemory.h>
