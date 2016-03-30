@@ -54,13 +54,50 @@ Each container have iterators, search/find, and can input/output to other types 
 ### Usage
 ####Using Memory manager
 First, we need to initialize the memory manager:
-```sh
+```
 OSMemory::Init(SIZE_T size);
 ```
 size, is the required size by the application for it's life-cycle, it's important to notice that all boxyto memory system depend on this.
 
 When the application goes to end, we need to shutdown and release our memory manager:
 ```
+OSMemory::Terminate()
+```
+and that's it!
+
+To use the memory manager, we need to create something called Segment Manager, and a segment is simply a segment of memory contains one or more system pages, the default page size is the huge system page size (most of time 2 MiB), witch is a TLB hit, you can query the system page size size by call
+```
+OSMemory::GetPageSize()
+```
+
+Segments are very big, we can directly use segments for allocations, or we can use allocators to direct interact with segments, here is an example:
+```
+// Create a dynamic segment
+// note that pageCount is how many pages we need in this segment, 
+// if left empty, that means one page (default)
+DynamicSegment dynamicSegment(pageCount);
+
+// Direct allocate from segment
+// Alloc takes the allocation size, and allocation alignment (power of 2)
+UINTPTR handle = dynamicSegment.Alloc(1024, 16);
+
+// We use a handle because our segment allows defragmentation, and this will change pointer location in memory
+// To obtain a pointer at any time
+void* ptr = DynamicSegment::PointerOf(handle);
+
+// if you would like to obtain an updated pointer nomatter when it called, use Pointer<T> class
+Pointer<T> ptr = DynamicSegment::PointerOf(handle);
+ptr->DoSomething();
+// OR...
+ptr.Get()->DoSomething();
+
+// To deallocate an allocation
+dynamicSegment.Dealloc(handle);
+
+// To defragment a dynamic segment
+// remember that defragmentation is consuming time heavly, use it wisely,
+// for example: use it when we have remaining time in our game loop system
+dynamicSegment.Defragment();
 ```
 
 [OSMemory]: </boxyto/memory/OSMemory.h>
