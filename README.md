@@ -52,7 +52,16 @@ Each container have iterators, search/find, and can input/output to other types 
 - [Common]: Some template based support for other systems
 
 ### Usage
+####Using Memory manager
+First, we need to initialize the memory manager:
+```sh
+OSMemory::Init(SIZE_T size);
+```
+size, is the required size by the application for it's life-cycle, it's important to notice that all boxyto memory system depend on this.
 
+When the application goes to end, we need to shutdown and release our memory manager:
+```
+```
 
 [OSMemory]: </boxyto/memory/OSMemory.h>
 [StaticSegment]: </boxyto/memory/StaticSegment.h>
@@ -75,4 +84,5 @@ Each container have iterators, search/find, and can input/output to other types 
 [CircularArray]: </boxyto/containers/CircularArray.h>
 [Pair]: </boxyto/containers/Pair.h>
 [ForEach]: </boxyto/containers/ForEach.h>
+[sets]: </boxyto/containers/sets.h>
 [Common]: </boxyto/template/common.h>
