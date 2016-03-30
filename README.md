@@ -61,13 +61,13 @@ size, is the required size by the application for it's life-cycle, it's importan
 
 When the application goes to end, we need to shutdown and release our memory manager:
 ```
-OSMemory::Terminate()
+OSMemory::Terminate();
 ```
 and that's it!
 
 To use the memory manager, we need to create something called Segment Manager, and a segment is simply a segment of memory contains one or more system pages, the default page size is the huge system page size (most of time 2 MiB), witch is a TLB hit, you can query the system page size size by call
 ```
-OSMemory::GetPageSize()
+OSMemory::GetPageSize();
 ```
 
 Segments are very big, we can directly use segments for allocations, or we can use allocators to direct interact with segments, here is an example:
