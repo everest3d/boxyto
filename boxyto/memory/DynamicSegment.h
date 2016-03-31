@@ -427,6 +427,10 @@ namespace Everest
 			return newChunk;
 		}
 
+		void Defragment()
+		{
+			//TODO:...
+		}
 
 		// New function that allocate and construct empty an object
 		// if you want to use the engine allocator

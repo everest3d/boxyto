@@ -28,7 +28,7 @@ SOFTWARE.
 #include <cstring>
 
 namespace Everest
-{//
+{
 	// System memcpy  
 	static void* Memcopy(void* dst, void* src, const SIZE_T size)
 	{
