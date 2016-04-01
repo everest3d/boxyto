@@ -38,8 +38,8 @@ On the other hand, Boxyto showed much performance improvements in benchmarks reg
 
 #### Containers
 Each container have iterators, search/find, and can input/output to other types of container
-- [Array]: Dynamic array that can also simulate stack and queue containers
-- [DoubleLinkedList]: Double Linked List of connected nodes, container also support stack and queue
+- [Array]: Dynamic array that can also simulate stack and queue operations
+- [DoubleLinkedList]: Double Linked List of connected nodes, container also support stack and queue operations
 - [Map]: Red-Black tree based map
 - [HashMap]: key-value hashed map
 - [HashList]: Hashed key list
