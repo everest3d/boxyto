@@ -18,7 +18,7 @@ On the other hand, Boxyto showed much performance improvements in benchmarks reg
 - Smart Pointers
 - Standard library interchange support
 - OS detection
-- Compiter detection (MSVC - CLANG - GNU)
+- Compiler support (MSVC - CLANG - GNU)
 
 ### Classes & Modules
 #### Memory Manager 
