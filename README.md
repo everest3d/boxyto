@@ -106,8 +106,6 @@ dynamicSegment.Defragment();
 // To reset/release a segment
 dynamicSegment.Release();
 ```
-What if you would like to use boxyto memory manager with std containers?
-No pro
 
 #### Using Containers
 We will assume that we have configured DynamicSegment, also we will use Everest::Array for example
@@ -128,6 +126,23 @@ Everest::Array<std::string> array(alloc);
 
 // The following is wrong for all boxyto containers
 // Everest::Array<std::string> array;
+```
+What if you would like to use boxyto memory manager with std containers?
+
+No problem, use Everest::StdAllocator class:
+```
+// Define the allocator type
+typedef Everest::Allocator<std::string> StdAllocType;
+
+// Create the allocator
+// Std allocators can consume static segments only
+StdAllocType stdAlloc(staticSegment);
+
+// Create a std vector container
+std::vector<std::string> myVec(stdAlloc);
+
+// ... 
+// Use your container as usual
 ```
 
 ### Documentation
