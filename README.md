@@ -1,5 +1,5 @@
 ### Introduction
-Boxyto is a C++ 11,14 library for real time and high performance applications that includes more of the standard library re-implemented, with many enhancements and new features.
+Boxyto is a C++ 11, 14 library for real time and high performance applications that includes more of the standard library re-implemented, with many enhancements and new features.
 On the other hand, Boxyto showed much performance improvements in benchmarks regarding to standard library.
 
 ### Version
