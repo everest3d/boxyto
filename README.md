@@ -114,6 +114,7 @@ We will assume that we have configured DynamicSegment, also we will use Everest:
 typedef Everest::LinearAllocator<std::string> Allocator;
 
 // Create a segment manager to consume
+// A segment with 1 page (default)
 std::shard_ptr<DynamicSegment> segment(new DynamicSegment);
 
 // Create an allocator instance
@@ -122,9 +123,11 @@ Allocator alloc(segment);
 
 // Create the array
 // We then pass a configured allocator to the container
-Everest::Array<std::string> array(alloc);
+Everest::Array<std::string, Allocator> array(alloc);
 
 // The following is wrong for all boxyto containers
+// NO TEMPLATE ALLOCATOR TYPE!
+// NO CONSTRUCTOR
 // Everest::Array<std::string> array;
 ```
 What if you would like to use boxyto memory manager with std containers?
@@ -139,10 +142,13 @@ typedef Everest::Allocator<std::string> StdAllocType;
 StdAllocType stdAlloc(staticSegment);
 
 // Create a std vector container
-std::vector<std::string> myVec(stdAlloc);
+// Do not fotget to construct with the allocator instance creator
+// You can do the same steps for any std container
+std::vector<std::string, StdAllocType> myVec(stdAlloc);
 
-// ... 
-// Use your container as usual
+// Use your container as usual, 
+// and now the container allocates from boxyto memory manager
+// ...
 ```
 
 ### Documentation
