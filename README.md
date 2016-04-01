@@ -38,13 +38,13 @@ On the other hand, Boxyto showed much performance improvements in benchmarks reg
 
 #### Containers
 Each container have iterators, search/find, and can input/output to other types of container
-- [Array]
-- [DoubleLinkedList]
+- [Array]: Dynamic array that can also simulate stack and queue containers
+- [DoubleLinkedList]: Double Linked List of connected nodes, container also support stack and queue
 - [Map]: Red-Black tree based map
 - [HashMap]: key-value hashed map
-- [HashList]
-- [CircularArray]
-- [Pair]
+- [HashList]: Hashed key list
+- [CircularArray]: Static array the work like queue
+- [Pair]: Key-Value pair
 - [Sets]: Not a container, but a set of functions that apply Set opreations on any type of container
 - [ForEach]: Simplified for each that iterate over a container elements, and execute a function on them
 
@@ -147,6 +147,10 @@ std::vector<std::string> myVec(stdAlloc);
 
 ### Documentation
 All source code is inline documented
+
+### Questions
+Contact me with your suggestions and questions at:
+a.essam.sayed@gmail.com
 
 ### License
 MIT
