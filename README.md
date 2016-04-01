@@ -3,7 +3,7 @@ Boxyto is a C++ 11, 14 library for real time and high performance applications t
 On the other hand, Boxyto showed much performance improvements in benchmarks regarding to standard library.
 
 ### Version
-1.0.12
+0.8.12
 
 ### Features
 - Cross platform (Windows - Mac OS X - IOS - Android - Linux)
@@ -84,6 +84,9 @@ DynamicSegment dynamicSegment(pageCount);
 // Direct allocate from segment
 // Alloc takes the allocation size, and allocation alignment (power of 2)
 UINTPTR handle = dynamicSegment.Alloc(1024, 16);
+
+// You can also use the _NEW<T> function to simulate the new opreator
+UINTPTR handleNew = dynamicSegment._NEW<std::string>("Hey Boxytp!");
 
 // We use a handle because our segment allows defragmentation, and this will change pointer location in memory
 // To obtain a pointer at any time
