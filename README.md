@@ -55,12 +55,16 @@ Each container have iterators, search/find, and can input/output to other types 
 #### Using Memory manager
 First, we need to initialize the memory manager:
 ```
+using namespace Everest;
+
+// Init memory manager
 OSMemory::Init(SIZE_T size);
 ```
 size, is the required size by the application for it's life-cycle, it's important to notice that all boxyto memory system depend on this.
 
 When the application goes to end, we need to shutdown and release our memory manager:
 ```
+// Shutdown memory manager
 OSMemory::Terminate();
 ```
 and that's it!
@@ -102,6 +106,9 @@ dynamicSegment.Defragment();
 // To reset/release a segment
 dynamicSegment.Release();
 ```
+What if you would like to use boxyto memory manager with std containers?
+No pro
+
 #### Using Containers
 We will assume that we have configured DynamicSegment, also we will use Everest::Array for example
 ```
@@ -122,6 +129,7 @@ Everest::Array<std::string> array(alloc);
 // The following is wrong for all boxyto containers
 // Everest::Array<std::string> array;
 ```
+
 ### Documentation
 All source code is inline documented
 
